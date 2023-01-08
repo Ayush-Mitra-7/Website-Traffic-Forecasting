@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Traffic Forecasting</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+body {background-color:#026b48;}
+
+
+
+
+
+</style>
+<div class="container">
+    <div class="row">
+        <div class="form-group ">
+            <h1 class="text-red card text-center"
+                style="font-size:50px; font-family: 'Rowdies', cursive; color:white; position:relative;left: 540px;top: 40px;">
+                Web Traffic Forecast</h1>
+            <div class="col-xs-4 text-center card text-center">
+                <form action="/plot.png" method="post" class="form-group">
+                    <input name="user_input" type="text" class="form-control"
+                           placeholder="Enter the Number of days"
+                           style="position:relative;left: 675px;top: 40px;"><br>
+                    <div class="text-center">
+                        <input type="submit" class="btn btn-lg btn-warning "
+                               style="position:relative;left: 751px;top: 55px;">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% if data %}
+<div>
+   <img src="/plot.png" alt="my plot">
+</div>
+{% endif %}
+</html>
